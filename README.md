@@ -18,7 +18,7 @@ A quick start template for web development with JSPM, Gulp, TypeScript, Angular 
 ### Installation
 
 ```
-git clone https://github.com/myurasov/Angular-ES6-JSPM-Gulp-Boilerplate.git myapp
+git clone https://github.com/madhukard/angular1.x-material-typescript-jspm.git myapp
 cd myapp
 npm install
 jspm install
