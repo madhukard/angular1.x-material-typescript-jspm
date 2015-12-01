@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+  <title>AngularJS + Material</title>
+
+  <style type="text/css">
+    /**
+     * Hide when Angular is not yet loaded and initialized
+     */
+    [ng-cloak] {
+      display: none;
+    }
+  </style>
+</head>
+
+<body ng-cloak layout="column">
+
+  <div ng-include="'src/users/view/browseUsers.html'"
+       layout="column" flex tabIndex="-1" role="main" >
+  </div>
+
+  <!--removeIf(production)-->
+  <script src="/jspm/system.js"></script>
+  <script src="jspm-config/config.js"></script>
+  <script type="text/javascript">
+    System
+      .import('./js/boot')
+      .catch( console.error.bind(console) ); // make sure any errors print to console
+  </script>
+  <!--endRemoveIf(production)-->
+
+  <!-- inject:js -->
+  <!-- endinject -->
+
+</body>
+</html>
