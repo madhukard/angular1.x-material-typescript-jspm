@@ -7,11 +7,11 @@ var config = require('../../config').sass.production;
 
 var globbing = require('gulp-css-globbing');
 gulp.task('sass-deploy', function () {
-    gulp.src(config.main)
-        .pipe(globbing({
-            extensions: ['.scss']
-        }))
-        .pipe(sass().on('error', sass.logError))
-        .pipe(flatten())
-        .pipe(gulp.dest(config.dest));
+  gulp.src(config.main)
+    .pipe(globbing({
+      extensions: ['.scss']
+    }))
+    .pipe(sass().on('error', sass.logError))
+    .pipe(flatten())
+    .pipe(gulp.dest(config.dest));
 });

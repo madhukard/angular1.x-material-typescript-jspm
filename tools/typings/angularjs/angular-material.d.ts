@@ -6,7 +6,7 @@
 /// <reference path="../angularjs/angular.d.ts" />
 
 declare module "angular-material" {
-  var _: string;
+  var _:string;
   export = _;
 }
 
@@ -27,42 +27,42 @@ declare module angular.material {
   }
 
   interface IBottomSheetService {
-    show(options: IBottomSheetOptions): angular.IPromise<any>;
-    hide(response?: any): void;
-    cancel(response?: any): void;
+    show(options:IBottomSheetOptions): angular.IPromise<any>;
+    hide(response?:any): void;
+    cancel(response?:any): void;
   }
 
   interface IPresetDialog<T> {
-    title(title: string): T;
-    textContent(textContent: string): T;
-    htmlContent(htmlContent: string): T;
-    ok(ok: string): T;
-    theme(theme: string): T;
-    templateUrl(templateUrl?: string): T;
-    template(template?: string): T;
-    targetEvent(targetEvent?: MouseEvent): T;
-    scope(scope?: angular.IScope): T; // default: new child scope
-    preserveScope(preserveScope?: boolean): T; // default: false
-    disableParentScroll(disableParentScroll?: boolean): T; // default: true
-    hasBackdrop(hasBackdrop?: boolean): T; // default: true
-    clickOutsideToClose(clickOutsideToClose?: boolean): T; // default: false
-    escapeToClose(escapeToClose?: boolean): T; // default: true
-    focusOnOpen(focusOnOpen?: boolean): T; // default: true
-    controller(controller?: string|Function): T;
-    locals(locals?: {[index: string]: any}): T;
-    bindToController(bindToController?: boolean): T; // default: false
-    resolve(resolve?: {[index: string]: angular.IPromise<any>}): T;
-    controllerAs(controllerAs?: string): T;
-    parent(parent?: string|Element|JQuery): T; // default: root node
-    onComplete(onComplete?: Function): T;
-    ariaLabel(ariaLabel: string): T;
+    title(title:string): T;
+    textContent(textContent:string): T;
+    htmlContent(htmlContent:string): T;
+    ok(ok:string): T;
+    theme(theme:string): T;
+    templateUrl(templateUrl?:string): T;
+    template(template?:string): T;
+    targetEvent(targetEvent?:MouseEvent): T;
+    scope(scope?:angular.IScope): T; // default: new child scope
+    preserveScope(preserveScope?:boolean): T; // default: false
+    disableParentScroll(disableParentScroll?:boolean): T; // default: true
+    hasBackdrop(hasBackdrop?:boolean): T; // default: true
+    clickOutsideToClose(clickOutsideToClose?:boolean): T; // default: false
+    escapeToClose(escapeToClose?:boolean): T; // default: true
+    focusOnOpen(focusOnOpen?:boolean): T; // default: true
+    controller(controller?:string|Function): T;
+    locals(locals?:{[index: string]: any}): T;
+    bindToController(bindToController?:boolean): T; // default: false
+    resolve(resolve?:{[index: string]: angular.IPromise<any>}): T;
+    controllerAs(controllerAs?:string): T;
+    parent(parent?:string|Element|JQuery): T; // default: root node
+    onComplete(onComplete?:Function): T;
+    ariaLabel(ariaLabel:string): T;
   }
 
   interface IAlertDialog extends IPresetDialog<IAlertDialog> {
   }
 
   interface IConfirmDialog extends IPresetDialog<IConfirmDialog> {
-    cancel(cancel: string): IConfirmDialog;
+    cancel(cancel:string): IConfirmDialog;
   }
 
   interface IDialogOptions {
@@ -86,27 +86,27 @@ declare module angular.material {
   }
 
   interface IDialogService {
-    show(dialog: IDialogOptions|IAlertDialog|IConfirmDialog): angular.IPromise<any>;
+    show(dialog:IDialogOptions|IAlertDialog|IConfirmDialog): angular.IPromise<any>;
     confirm(): IConfirmDialog;
     alert(): IAlertDialog;
-    hide(response?: any): void;
-    cancel(response?: any): void;
+    hide(response?:any): void;
+    cancel(response?:any): void;
   }
 
   interface IIcon {
-    (id: string): angular.IPromise<Element>; // id is a unique ID or URL
+    (id:string): angular.IPromise<Element>; // id is a unique ID or URL
   }
 
   interface IIconProvider {
-    icon(id: string, url: string, viewBoxSize?: number): IIconProvider; // viewBoxSize default: 24
-    iconSet(id: string, url: string, viewBoxSize?: number): IIconProvider; // viewBoxSize default: 24
-    defaultIconSet(url: string, viewBoxSize?: number): IIconProvider; // viewBoxSize default: 24
-    defaultViewBoxSize(viewBoxSize: number): IIconProvider; // default: 24
-    defaultFontSet(name: string): IIconProvider;
+    icon(id:string, url:string, viewBoxSize?:number): IIconProvider; // viewBoxSize default: 24
+    iconSet(id:string, url:string, viewBoxSize?:number): IIconProvider; // viewBoxSize default: 24
+    defaultIconSet(url:string, viewBoxSize?:number): IIconProvider; // viewBoxSize default: 24
+    defaultViewBoxSize(viewBoxSize:number): IIconProvider; // default: 24
+    defaultFontSet(name:string): IIconProvider;
   }
 
   interface IMedia {
-    (media: string): boolean;
+    (media:string): boolean;
   }
 
   interface ISidenavObject {
@@ -118,18 +118,18 @@ declare module angular.material {
   }
 
   interface ISidenavService {
-    (component: string): ISidenavObject;
+    (component:string): ISidenavObject;
   }
 
   interface IToastPreset<T> {
-    content(content: string): T;
-    action(action: string): T;
-    highlightAction(highlightAction: boolean): T;
-    capsule(capsule: boolean): T;
-    theme(theme: string): T;
-    hideDelay(delay: number): T;
-    position(position: string): T;
-    parent(parent?: string|Element|JQuery): T; // default: root node
+    content(content:string): T;
+    action(action:string): T;
+    highlightAction(highlightAction:boolean): T;
+    capsule(capsule:boolean): T;
+    theme(theme:string): T;
+    hideDelay(delay:number): T;
+    position(position:string): T;
+    parent(parent?:string|Element|JQuery): T; // default: root node
   }
 
   interface ISimpleToastPreset extends IToastPreset<ISimpleToastPreset> {
@@ -151,13 +151,13 @@ declare module angular.material {
   }
 
   interface IToastService {
-    show(optionsOrPreset: IToastOptions|IToastPreset<any>): angular.IPromise<any>;
-    showSimple(content: string): angular.IPromise<any>;
+    show(optionsOrPreset:IToastOptions|IToastPreset<any>): angular.IPromise<any>;
+    showSimple(content:string): angular.IPromise<any>;
     simple(): ISimpleToastPreset;
     build(): IToastPreset<any>;
     updateContent(): void;
-    hide(response?: any): void;
-    cancel(response?: any): void;
+    hide(response?:any): void;
+    cancel(response?:any): void;
   }
 
   interface IPalette {
@@ -214,19 +214,19 @@ declare module angular.material {
     colors: IThemeColors;
     foregroundPalette: IThemeGrayScalePalette;
     foregroundShadow: string;
-    accentPalette(name: string, hues?: IThemeHues): ITheme;
-    primaryPalette(name: string, hues?: IThemeHues): ITheme;
-    warnPalette(name: string, hues?: IThemeHues): ITheme;
-    backgroundPalette(name: string, hues?: IThemeHues): ITheme;
-    dark(isDark?: boolean): ITheme;
+    accentPalette(name:string, hues?:IThemeHues): ITheme;
+    primaryPalette(name:string, hues?:IThemeHues): ITheme;
+    warnPalette(name:string, hues?:IThemeHues): ITheme;
+    backgroundPalette(name:string, hues?:IThemeHues): ITheme;
+    dark(isDark?:boolean): ITheme;
   }
 
   interface IThemingProvider {
-    theme(name: string, inheritFrom?: string): ITheme;
-    definePalette(name: string, palette: IPalette): IThemingProvider;
-    extendPalette(name: string, palette: IPalette): IPalette;
-    setDefaultTheme(theme: string): void;
-    alwaysWatchTheme(alwaysWatch: boolean): void;
+    theme(name:string, inheritFrom?:string): ITheme;
+    definePalette(name:string, palette:IPalette): IThemingProvider;
+    extendPalette(name:string, palette:IPalette): IPalette;
+    setDefaultTheme(theme:string): void;
+    alwaysWatchTheme(alwaysWatch:boolean): void;
   }
 
   interface IDateLocaleProvider {
@@ -236,10 +236,10 @@ declare module angular.material {
     shortDays: string[];
     dates: string[];
     firstDayOfWeek: number;
-    parseDate(dateString: string): Date;
-    formatDate(date: Date): string;
-    monthHeaderFormatter(date: Date): string;
-    weekNumberFormatter(weekNumber: number): string;
+    parseDate(dateString:string): Date;
+    formatDate(date:Date): string;
+    monthHeaderFormatter(date:Date): string;
+    weekNumberFormatter(weekNumber:number): string;
     msgCalendar: string;
     msgOpenCalendar: string;
   }
