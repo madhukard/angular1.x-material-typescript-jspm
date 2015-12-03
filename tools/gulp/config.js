@@ -1,6 +1,5 @@
 var app = 'app';
 var src = 'app/src';
-var srcAssets = 'app/assets';
 var vendor = 'app/vendor';
 var build = 'target';
 var development = 'target/development';
@@ -14,13 +13,7 @@ module.exports = {
   browsersync: {
     development: {
       server: {
-        baseDir: './',
-        routes: {
-          "/": development
-
-          //"/js": development + '/js',
-          //"/assets/css": development + '/css'
-        }
+        baseDir: development
       },
       port: 3000,
       files: [
