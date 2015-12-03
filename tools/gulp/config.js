@@ -16,26 +16,36 @@ module.exports = {
       server: {
         baseDir: './',
         routes: {
-          "/": "app",
-          "/jspm": "target/jspm_packages",
-          "/maps/": development + '/maps',
-          "/js": development + '/js',
-          "/assets/css": development + '/css'
+          "/": development
+
+          //"/js": development + '/js',
+          //"/assets/css": development + '/css'
         }
       },
       port: 3000,
       files: [
-        development + '/js/**/*.js',
+        development + '/**/*.js',
         developmentAssets + '/images/**'
       ]
     }
   },
   delete: {
-    development: development,
+    development: ['target/development/**/*', '!target/development/jspm/**'],
     production: production,
     coverage: coverage
   },
+  copy: {
+    development: {
+      assets: app + '/**/*.svg',
+      css: app + '/**/*.css',
+      html: app + '/**/*.html',
+      js: app + '/**/*.js',
+      dest: development
+    },
+    production: {
 
+    }
+  },
   watch: {
     html: src + '/**/*.html',
     scripts: src + '/**/*.ts',
@@ -46,7 +56,7 @@ module.exports = {
   typescript: {
     development: {
       scripts: app + '/src/**/*.ts',
-      dest: development + '/js',
+      dest: development + '/src',
       coverage: build + '/coverage/js'
     },
     production: {
@@ -58,7 +68,8 @@ module.exports = {
   html: {
     development: {
       source: app + '/**/*.html',
-      dest: development
+      dest: development + '/src',
+      coverage: build + '/coverage/js'
     },
     production: {
       source: app + '/**/*.html',

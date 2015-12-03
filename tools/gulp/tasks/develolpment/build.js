@@ -6,6 +6,7 @@ var runSequence = require('run-sequence');
  */
 gulp.task('build', function (callback) {
   runSequence('delete',
+    'copy',
     'typescript-dev',
     [
       'dev-templates',

@@ -80,7 +80,7 @@
   },
   "jspm": {
     "directories": {
-      "packages": "target/jspm_packages"
+      "packages": "target/development/jspm"
     },
     "configFile": "app/jspm-config/config.js",
     "dependencies": {
