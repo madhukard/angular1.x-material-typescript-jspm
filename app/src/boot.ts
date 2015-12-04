@@ -1,14 +1,12 @@
 /// <reference path="../../tools/typings/tsd.d.ts" />
 
 // Load the Angular Material CSS associated with ngMaterial
-// then load the main.css to provide overrides, etc.
+// then load the app.css to provide overrides, etc.
 
-import 'angular-material/angular-material.css!'
-import 'assets/app.css!'
+import 'angular-material/angular-material.css!';
+import 'assets/app.css!';
 
 // Load Angular libraries
-
-
 import * as angular from 'angular';
 import * as material from 'angular-material';
 

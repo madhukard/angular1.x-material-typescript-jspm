@@ -72,9 +72,9 @@ module.exports = {
 
   sass: {
     development: {
-      main: app + '/style/app.scss',
+      main: app + '/scss/app.scss',
       source: src + '/**/*.scss',
-      dest: development + '/css'
+      dest: development + '/assets'
     },
     production: {
       main: app + '/style/app.scss',
