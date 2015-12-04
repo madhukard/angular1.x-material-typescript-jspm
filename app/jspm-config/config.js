@@ -16,13 +16,13 @@ System.config({
   map: {
     "-": "npm:babel-core@5.8.25",
     "--runtime": "npm:babel-runtime@5.8.25",
-    "angular": "npm:angular@1.4.7",
-    "angular-animate": "github:angular/bower-angular-animate@1.4.7",
-    "angular-aria": "github:angular/bower-angular-aria@1.4.7",
-    "angular-cookies": "github:angular/bower-angular-cookies@1.4.7",
+    "angular": "npm:angular@1.4.8",
+    "angular-animate": "github:angular/bower-angular-animate@1.4.8",
+    "angular-aria": "github:angular/bower-angular-aria@1.4.8",
+    "angular-cookies": "github:angular/bower-angular-cookies@1.4.8",
     "angular-local-storage": "npm:angular-local-storage@0.2.2",
     "angular-material": "github:angular/bower-material@master",
-    "angular-mocks": "github:angular/bower-angular-mocks@1.4.7",
+    "angular-mocks": "github:angular/bower-angular-mocks@1.4.8",
     "angular-sanitize": "github:angular/bower-angular-sanitize@1.4.6",
     "angular-translate": "github:angular-translate/bower-angular-translate@2.8.0",
     "angular-ui-router": "npm:angular-ui-router@0.2.15",
@@ -36,27 +36,27 @@ System.config({
     "text": "github:systemjs/plugin-text@0.0.2",
     "typescript": "npm:typescript@1.6.0-dev.20150825",
     "github:angular-translate/bower-angular-translate@2.8.0": {
-      "angular": "npm:angular@1.4.7"
+      "angular": "npm:angular@1.4.8"
     },
-    "github:angular/bower-angular-animate@1.4.7": {
-      "angular": "github:angular/bower-angular@1.4.7"
+    "github:angular/bower-angular-animate@1.4.8": {
+      "angular": "github:angular/bower-angular@1.4.8"
     },
-    "github:angular/bower-angular-aria@1.4.7": {
-      "angular": "github:angular/bower-angular@1.4.7"
+    "github:angular/bower-angular-aria@1.4.8": {
+      "angular": "github:angular/bower-angular@1.4.8"
     },
-    "github:angular/bower-angular-cookies@1.4.7": {
-      "angular": "npm:angular@1.4.7"
+    "github:angular/bower-angular-cookies@1.4.8": {
+      "angular": "npm:angular@1.4.8"
     },
-    "github:angular/bower-angular-mocks@1.4.7": {
-      "angular": "npm:angular@1.4.7"
+    "github:angular/bower-angular-mocks@1.4.8": {
+      "angular": "npm:angular@1.4.8"
     },
     "github:angular/bower-angular-sanitize@1.4.6": {
-      "angular": "github:angular/bower-angular@1.4.7"
+      "angular": "github:angular/bower-angular@1.4.8"
     },
     "github:angular/bower-material@master": {
-      "angular": "github:angular/bower-angular@1.4.7",
-      "angular-animate": "github:angular/bower-angular-animate@1.4.7",
-      "angular-aria": "github:angular/bower-angular-aria@1.4.7",
+      "angular": "github:angular/bower-angular@1.4.8",
+      "angular-animate": "github:angular/bower-angular-animate@1.4.8",
+      "angular-aria": "github:angular/bower-angular-aria@1.4.8",
       "css": "github:systemjs/plugin-css@0.1.18"
     },
     "github:jspm/nodelibs-assert@0.1.0": {
@@ -119,7 +119,7 @@ System.config({
     "npm:angular-ui-router@0.2.15": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
-    "npm:angular@1.4.7": {
+    "npm:angular@1.4.8": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:ansi-green@0.1.1": {
