@@ -1,56 +1,42 @@
+import UserSheetController from './UserSheetController';
+
 /**
  * Main App Controller for the Angular Material Starter App
- * @param $scope
- * @param $mdSidenav
- * @param avatarsService
- * @constructor
  */
-function UsersController( usersService, $mdSidenav, $mdBottomSheet ) {
-  var self = this;
+class UsersController {
+  userService: any;
+  $mdSidenav: any;
+  $mdBottomSheet: any;
+  selected: string;
+  users: any;
 
-  self.selected     = null;
-  self.users        = [ ];
-  self.selectUser   = selectUser;
-  self.toggleList   = toggleUsersList;
-  self.share        = share;
+  constructor(usersService, $mdSidenav, $mdBottomSheet) {
+    this.userService = usersService;
+    this.$mdSidenav = $mdSidenav;
+    this.$mdBottomSheet = $mdBottomSheet;
 
-  // Load all registered users
-
-  usersService
-    .loadAll()
-    .then( function( users ) {
-      self.users    = [].concat(users);
-      self.selected = users[0];
-    });
-
-  // *********************************
-  // Internal methods
-  // *********************************
-
-  /**
-   * Hide or Show the 'left' sideNav area
-   */
-  function toggleUsersList() {
-    $mdSidenav('left').toggle();
+    var self = this;
+    usersService
+      .loadAll()
+      .then( function(users) {
+        self.users    = [].concat(users);
+        self.selected = users[0];
+      });
   }
 
-  /**
-   * Select the current avatars
-   * @param menuId
-   */
-  function selectUser ( user ) {
+  toggleUsersList() {
+    this.$mdSidenav('left').toggle();
+  };
 
-    self.selected = angular.isNumber(user) ? $scope.users[user] : user;
-    self.toggleList();
-  }
+  selectUser (user ) {
+    this.selected = user;
+    this.toggleUsersList();
+  };
 
-  /**
-   * Show the bottom sheet
-   */
-  function share($event) {
-    var user = self.selected;
+  share($event) {
+    var user = this.selected;
 
-    $mdBottomSheet.show({
+    this.$mdBottomSheet.show({
       parent: angular.element(document.getElementById('content')),
       templateUrl: '/src/users/view/contactSheet.html',
       controller: [ '$mdBottomSheet', '$log', UserSheetController],
@@ -60,29 +46,11 @@ function UsersController( usersService, $mdSidenav, $mdBottomSheet ) {
     }).then(function(clickedItem) {
       //$log.debug( clickedItem.name + ' clicked!');
     });
-
-    /**
-     * Bottom Sheet controller for the Avatar Actions
-     */
-    function UserSheetController( $mdBottomSheet, $log ) {
-
-      this.user = user;
-      this.items = [
-        { name: 'Phone'       , icon: 'phone'       , icon_url: 'assets/svg/phone.svg'},
-        { name: 'Twitter'     , icon: 'twitter'     , icon_url: 'assets/svg/twitter.svg'},
-        { name: 'Google+'     , icon: 'google_plus' , icon_url: 'assets/svg/google_plus.svg'},
-        { name: 'Hangout'     , icon: 'hangouts'    , icon_url: 'assets/svg/hangouts.svg'}
-      ];
-      this.performAction = function(action) {
-        $mdBottomSheet.hide(action);
-      };
-
-    }
   }
 }
 
 export default [
-  'usersService', '$mdSidenav', '$mdBottomSheet', '$log',
+  'usersService', '$mdSidenav', '$mdBottomSheet',
   UsersController
 ];
 
