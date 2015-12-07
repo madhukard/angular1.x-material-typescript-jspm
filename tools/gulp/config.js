@@ -54,7 +54,7 @@ module.exports = {
     },
     production: {
       scripts: app + '/src/**/*.ts',
-      dest: production + '/js/src'
+      dest: production + '/src'
     }
   },
 
@@ -87,6 +87,13 @@ module.exports = {
     production: {
       source: app + '/assets/images/*.*',
       dest: productionAssets + '/images'
+    }
+  },
+
+  scripts: {
+    production: {
+      source: production + '/src/main.js' ,
+      dest: production
     }
   }
 
