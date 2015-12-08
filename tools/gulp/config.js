@@ -92,7 +92,7 @@ module.exports = {
 
   scripts: {
     production: {
-      source: production + '/src/main.js' ,
+      source: production + '/src/boot.js' ,
       dest: production
     }
   }
