@@ -31,4 +31,4 @@ gulp
 
 ### Production build
 
-'gulp deploy'
+`gulp deploy`
