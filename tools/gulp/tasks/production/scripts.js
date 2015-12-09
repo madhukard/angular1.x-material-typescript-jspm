@@ -14,20 +14,25 @@ gulp.task('scripts-bundle', function () {
     baseURL: "./"
   });
 
-  return builder.buildStatic(config.source, { sourceMaps: true }).then(function (output) {
-    var stream = source('app.js');
+  return new Promise(function(resolve, reject) {
+    builder.buildStatic(config.source, { sourceMaps: true })
+      .then(function (output) {
+        var stream = source('app.js');
 
-    stream.write(output.source);
-    process.nextTick(function () {
-      stream.end();
-    });
+        stream.write(output.source);
+        process.nextTick(function () {
+          stream.end();
+        });
 
-    return stream.pipe(vinylBuffer())
-      .pipe(sourcemaps.init())
-      .pipe(ngAnnotate())
-      .pipe(uglify())
-      .pipe(rename({ suffix: '.min' }))
-      .pipe(sourcemaps.write())
-      .pipe(gulp.dest(config.dest));
+        return stream.pipe(vinylBuffer())
+          .pipe(sourcemaps.init())
+          .pipe(ngAnnotate())
+          .pipe(uglify())
+          .pipe(rename({ suffix: '.min' }))
+          .pipe(sourcemaps.write())
+          .pipe(gulp.dest(config.dest))
+          .on('end', resolve)
+          .on('error', reject);
+      });
   });
 });
