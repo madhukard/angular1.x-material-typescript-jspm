@@ -28,3 +28,7 @@ gulp
 ### Live Reload
 
 `gulp`
+
+### Production build
+
+'gulp deploy'
