@@ -7,7 +7,8 @@ var sourcemaps = require('gulp-sourcemaps');
 var tslint = require('gulp-tslint');
 
 var tsProject = typescript.createProject({
-  target: 'es6',
+  target: 'es5',
+  module: 'commonjs',
   sortOutput: true,
   typescript: require('typescript')
 });

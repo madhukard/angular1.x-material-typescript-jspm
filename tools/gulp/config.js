@@ -85,8 +85,8 @@ module.exports = {
 
   images: {
     production: {
-      source: app + '/assets/images/*.*',
-      dest: productionAssets + '/images'
+      source: app + '/**/*.svg',
+      dest: production
     }
   },
 

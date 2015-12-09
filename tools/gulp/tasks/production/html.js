@@ -3,7 +3,7 @@ var flatten = require('gulp-flatten');
 var config = require('../../config').html.production;
 var removeCode = require('gulp-remove-code');
 var inject = require('gulp-inject');
-var sources = gulp.src(config.dest + '/app.js', {read: false});
+var sources = gulp.src(config.dest + '/app.min.js', {read: false});
 gulp.task('html-deploy', function () {
 
   return gulp.src(config.source)
