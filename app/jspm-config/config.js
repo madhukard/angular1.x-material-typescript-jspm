@@ -12,6 +12,7 @@ System.config({
     "github:*": "target/development/jspm/github/*",
     "npm:*": "target/development/jspm/npm/*"
   },
+
   map: {
     "-": "npm:babel-core@5.8.25",
     "--runtime": "npm:babel-runtime@5.8.25",
