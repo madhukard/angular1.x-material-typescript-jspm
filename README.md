@@ -5,6 +5,9 @@ Starter project for AngularJS + Material + TypeScript + JSPM + Gulp
 A quick start template for web development with JSPM, Gulp, TypeScript, Angular Material and AngularJS. 
 
 
+Demo - http://madhukard.github.io/angular1.x-material-typescript-jspm/
+
+
 ## Development Requirements
 
 |Dependency|OS X Installation|
