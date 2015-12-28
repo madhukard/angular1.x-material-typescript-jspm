@@ -1,3 +1,6 @@
+
+[![devDependency Status](https://david-dm.org/madhukard/angular1.x-material-typescript-jspm/dev-status.svg)](https://david-dm.org/madhukard/angular1.x-material-typescript-jspm#info=devDependencies)
+
 Starter project for AngularJS + Material + TypeScript + JSPM + Gulp
 
 # AngularJS / Angular Material / TypeScript / JSPM / Gulp Starter Project
