@@ -29,7 +29,8 @@ module.exports = {
   },
   copy: {
     development: {
-      assets: app + '/**/*.svg',
+      svg: app + '/**/*.svg',
+      png: app + '/**/*.png',
       css: app + '/**/*.css',
       html: app + '/**/*.html',
       js: app + '/**/*.js',
@@ -61,7 +62,7 @@ module.exports = {
   html: {
     development: {
       source: app + '/**/*.html',
-      dest: development + '/src',
+      dest: development,
       coverage: build + '/coverage/js'
     },
     production: {
@@ -77,16 +78,16 @@ module.exports = {
       dest: development + '/assets'
     },
     production: {
-      main: app + '/style/app.scss',
-      source: app + '/**/*.scss',
-      dest: productionAssets + '/css'
+      main: app + '/scss/app.scss',
+      source: src + '/**/*.scss',
+      dest: development + '/assets'
     }
   },
 
   images: {
     production: {
-      source: app + '/**/*.svg',
-      dest: production
+      source: app + '/assets/**/*.*',
+      dest: production + '/assets'
     }
   },
 
