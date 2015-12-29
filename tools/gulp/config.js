@@ -29,10 +29,7 @@ module.exports = {
   },
   copy: {
     development: {
-      svg: app + '/**/*.svg',
-      png: app + '/**/*.png',
-      css: app + '/**/*.css',
-      html: app + '/**/*.html',
+      assets: app + '/assets/**/*.*',
       js: app + '/**/*.js',
       dest: development
     },
@@ -43,7 +40,8 @@ module.exports = {
   watch: {
     html: src + '/**/*.html',
     scripts: src + '/**/*.ts',
-    sass: app + '/**/*.scss'
+    sass: app + '/**/*.scss',
+    assets: app + '/assets/**/*.*'
   },
   app: app,
   production: production,

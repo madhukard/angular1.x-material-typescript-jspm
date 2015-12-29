@@ -7,12 +7,19 @@
     "type": "git",
     "url": "https://github.com/madhukard/angular1.x-material-typescript-jspm"
   },
+  "keywords": [
+    "Angular",
+    "TypeScript",
+    "JSPM",
+    "Gulp"
+  ],
   "dependencies": {},
   "scripts": {
     "test": "gulp test"
   },
   "devDependencies": {
     "browser-sync": "^2.10.1",
+    "browser-sync-spa": "^1.0.2",
     "del": "^2.2.0",
     "gulp": "~3.9.0",
     "gulp-angular-templatecache": "^1.7.0",
