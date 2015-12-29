@@ -1,4 +1,5 @@
 
+[![Build Status](https://travis-ci.org/madhukard/angular1.x-material-typescript-jspm.svg?branch=master)](https://travis-ci.org/madhukard/angular1.x-material-typescript-jspm)
 [![devDependency Status](https://david-dm.org/madhukard/angular1.x-material-typescript-jspm/dev-status.svg)](https://david-dm.org/madhukard/angular1.x-material-typescript-jspm#info=devDependencies)
 
 Starter project for AngularJS + Material + TypeScript + JSPM + Gulp
