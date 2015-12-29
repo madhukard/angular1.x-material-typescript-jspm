@@ -31,6 +31,6 @@ gulp.task('scripts-bundle', function () {
           .pipe(gulp.dest(config.dest))
           .on('end', resolve)
           .on('error', reject);
-      });
+      }, reject);
   });
 });
