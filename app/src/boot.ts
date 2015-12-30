@@ -4,6 +4,7 @@
 // then load the app.css to provide overrides, etc.
 
 import 'angular-material/angular-material.css!';
+import 'assets/material-icons.css!';
 import 'assets/app.css!';
 
 // Load Angular libraries

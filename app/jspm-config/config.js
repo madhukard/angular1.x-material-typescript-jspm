@@ -9,11 +9,9 @@ System.config({
     ]
   },
   paths: {
-    "assets/app.css": "target/development/assets/app.css",
-    "github:*": "target/development/jspm/github/*",
-    "npm:*": "target/development/jspm/npm/*"
+    "github:*": "jspm/github/*",
+    "npm:*": "jspm/npm/*"
   },
-
   map: {
     "-": "npm:babel-core@5.8.34",
     "--runtime": "npm:babel-runtime@5.8.34",

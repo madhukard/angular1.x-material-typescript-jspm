@@ -12,6 +12,16 @@ var rename = require('gulp-rename');
 gulp.task('scripts-bundle', function () {
   var builder = new jspm.Builder();
 
+  builder.config({
+    paths: {
+      "assets/material-icons.css": "target/development/assets/material-icons.css",
+      "assets/app.css": "target/development/assets/app.css",
+      "github:*": "target/development/jspm/github/*",
+      "npm:*": "target/development/jspm/npm/*"
+    },
+    rootURL: "target/development/"
+  });
+
   return new Promise(function(resolve, reject) {
     builder.buildStatic(config.source, { sourceMaps: true })
       .then(function (output) {
