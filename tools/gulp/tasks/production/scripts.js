@@ -14,12 +14,10 @@ gulp.task('scripts-bundle', function () {
 
   builder.config({
     paths: {
-      "assets/material-icons.css": "target/development/assets/material-icons.css",
-      "assets/app.css": "target/development/assets/app.css",
-      "github:*": "target/development/jspm/github/*",
-      "npm:*": "target/development/jspm/npm/*"
+      "assets/material-icons.css": "target/production/assets/material-icons.css",
+      "assets/app.css": "target/production/assets/app.css"
     },
-    rootURL: "target/development/"
+    rootURL: "target/production/"
   });
 
   return new Promise(function(resolve, reject) {

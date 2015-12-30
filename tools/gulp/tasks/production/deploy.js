@@ -12,8 +12,8 @@ gulp.task('deploy', function (callback) {
     'production-jspm-config',
     //'test-deploy',
     'sass-deploy',
-    'scripts-bundle',
     'production-images',
+    'scripts-bundle',
     'delete-deploy-src',
     'html-deploy',
     callback);
